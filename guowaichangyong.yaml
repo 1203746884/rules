@@ -1149,3 +1149,4 @@ payload:
 
 #这里不加标志位，就能实现在这里补充一些需要代理的
   - DOMAIN-SUFFIX,browserleaks.com
+  - DOMAIN-SUFFIX,xiaomiflash.com
