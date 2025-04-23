@@ -1915,14 +1915,14 @@ payload:
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-04-21 02:12:32
-# DOMAIN: 88
+# UPDATED: 2025-04-23 02:13:33
+# DOMAIN: 89
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31347
+# DOMAIN-SUFFIX: 31354
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
-# TOTAL: 31588
+# TOTAL: 31596
   - DOMAIN-KEYWORD,amazon
   - DOMAIN-KEYWORD,avoddashs
   - DOMAIN-KEYWORD,bbcfmt
@@ -2082,13 +2082,13 @@ payload:
 # NAME: Proxy
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-04-19 02:13:41
+# UPDATED: 2025-04-23 02:13:52
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 6506
+# DOMAIN-SUFFIX: 6507
 # IP-CIDR: 93
 # IP-CIDR6: 4
-# TOTAL: 6638
+# TOTAL: 6639
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
   - DOMAIN-KEYWORD,abema
@@ -11155,13 +11155,13 @@ payload:
 # NAME: ProxyLite
 # AUTHOR: blackmatrix7
 # REPO: https://gitlab.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-11-17 02:12:46
+# UPDATED: 2025-04-23 02:14:52
 # DOMAIN: 23
 # DOMAIN-KEYWORD: 20
-# DOMAIN-SUFFIX: 842
+# DOMAIN-SUFFIX: 841
 # IP-CIDR: 86
 # IP-CIDR6: 4
-# TOTAL: 975
+# TOTAL: 974
   - DOMAIN,addons.mozilla.org
   - DOMAIN,amp-api.podcasts.apple.com
   - DOMAIN,api.msn.com
@@ -11310,7 +11310,6 @@ payload:
   - DOMAIN-SUFFIX,celestrak.com
   - DOMAIN-SUFFIX,census.gov
   - DOMAIN-SUFFIX,change.org
-  - DOMAIN-SUFFIX,chaturbate.com
   - DOMAIN-SUFFIX,chinadigitaltimes.net
   - DOMAIN-SUFFIX,chinatimes.com
   - DOMAIN-SUFFIX,cl.ly
