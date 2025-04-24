@@ -2082,13 +2082,13 @@ payload:
 # NAME: Proxy
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-04-23 02:13:52
+# UPDATED: 2025-04-24 02:14:00
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 6507
+# DOMAIN-SUFFIX: 6508
 # IP-CIDR: 93
 # IP-CIDR6: 4
-# TOTAL: 6639
+# TOTAL: 6640
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
   - DOMAIN-KEYWORD,abema
@@ -11155,13 +11155,13 @@ payload:
 # NAME: ProxyLite
 # AUTHOR: blackmatrix7
 # REPO: https://gitlab.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-04-23 02:14:52
+# UPDATED: 2025-04-24 02:14:59
 # DOMAIN: 23
 # DOMAIN-KEYWORD: 20
-# DOMAIN-SUFFIX: 841
+# DOMAIN-SUFFIX: 842
 # IP-CIDR: 86
 # IP-CIDR6: 4
-# TOTAL: 974
+# TOTAL: 975
   - DOMAIN,addons.mozilla.org
   - DOMAIN,amp-api.podcasts.apple.com
   - DOMAIN,api.msn.com
@@ -11310,6 +11310,7 @@ payload:
   - DOMAIN-SUFFIX,celestrak.com
   - DOMAIN-SUFFIX,census.gov
   - DOMAIN-SUFFIX,change.org
+  - DOMAIN-SUFFIX,chaturbate.com
   - DOMAIN-SUFFIX,chinadigitaltimes.net
   - DOMAIN-SUFFIX,chinatimes.com
   - DOMAIN-SUFFIX,cl.ly
