@@ -4,7 +4,7 @@ payload:
 # NAME: DouYin
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:17:40
+# UPDATED: 2025-06-06 09:18:50
 # DOMAIN: 2
 # DOMAIN-SUFFIX: 11
 # TOTAL: 13
@@ -27,7 +27,7 @@ payload:
 # NAME: BiliBili
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:16:17
+# UPDATED: 2025-06-06 09:17:01
 # DOMAIN: 53
 # DOMAIN-SUFFIX: 62
 # IP-CIDR: 8
@@ -168,7 +168,7 @@ payload:
 # NAME: Baidu
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:16:17
+# UPDATED: 2025-06-06 09:17:01
 # DOMAIN-SUFFIX: 251
 # TOTAL: 251
   - DOMAIN-SUFFIX,17swan.com
@@ -428,7 +428,7 @@ payload:
 # NAME: Pinduoduo
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:16:17
+# UPDATED: 2025-06-06 09:17:01
 # DOMAIN-SUFFIX: 3
 # TOTAL: 3
   - DOMAIN-SUFFIX,pddpic.com
@@ -440,7 +440,7 @@ payload:
 # NAME: JingDong
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:16:43
+# UPDATED: 2025-06-06 09:17:35
 # DOMAIN-SUFFIX: 248
 # TOTAL: 248
   - DOMAIN-SUFFIX,1huizhan.com
@@ -697,7 +697,7 @@ payload:
 # NAME: NetEaseMusic
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:16:37
+# UPDATED: 2025-06-06 09:17:29
 # DOMAIN: 1
 # DOMAIN-SUFFIX: 9
 # IP-CIDR: 18
@@ -736,7 +736,7 @@ payload:
 # NAME: XiaoMi
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-03-27 02:14:07
+# UPDATED: 2025-06-06 09:17:02
 # DOMAIN-SUFFIX: 137
 # IP-CIDR: 5
 # PROCESS-NAME: 2
@@ -891,7 +891,7 @@ payload:
 # NAME: AliPay
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:16:38
+# UPDATED: 2025-06-06 09:17:31
 # DOMAIN-SUFFIX: 21
 # TOTAL: 21
   - DOMAIN-SUFFIX,alipay
@@ -921,7 +921,7 @@ payload:
 # NAME: WeChat
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:17:23
+# UPDATED: 2025-06-06 09:18:25
 # DOMAIN: 8
 # DOMAIN-SUFFIX: 22
 # IP-ASN: 1
@@ -963,7 +963,7 @@ payload:
 # NAME: Alibaba
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:16:37
+# UPDATED: 2025-06-06 09:17:30
 # DOMAIN-SUFFIX: 1251
 # IP-CIDR: 53
 # IP-CIDR6: 1
@@ -2281,7 +2281,7 @@ payload:
 # NAME: CCB
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:16:39
+# UPDATED: 2025-06-06 09:17:31
 # DOMAIN-SUFFIX: 18
 # TOTAL: 18
   - DOMAIN-SUFFIX,ccb-life.com.cn
@@ -2308,7 +2308,7 @@ payload:
 # NAME: GaoDe
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-07-03 16:16:41
+# UPDATED: 2025-06-06 09:17:34
 # DOMAIN-SUFFIX: 9
 # TOTAL: 9
   - DOMAIN-SUFFIX,a-map.cn
