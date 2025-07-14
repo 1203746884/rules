@@ -449,7 +449,7 @@ jobs:
 
       - name: 8.push iphone
         run: |
-          curl -X POST https://ddns.240205.xyz:35230/wait-check-post \
+          curl -sS -X POST https://ddns.240205.xyz:35230/wait-check-post \
           -H "Content-Type: application/json" \
           -d "{\"title\":\"[规则更新] 更新成功\",\"body\":\"时间：$(date '+%Y-%m-%d %H:%M:%S')\\n主机：$HOSTNAME\\n事件类型：规则更新\\n状态：成功\\n详情：规则已更新成功\\n备注：无\"}"
 
