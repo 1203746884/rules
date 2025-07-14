@@ -48,7 +48,7 @@ jobs:
             echo "" >> guoneichangyong.yaml
           done < urls.txt
 
-      - name: Generate guoneidaguize.yaml
+      - name: 2.Generate guoneidaguize.yaml
         run: |
           cat > urls.txt <<EOF
           https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaDNS/ChinaDNS_No_Resolve.yaml
@@ -73,7 +73,7 @@ jobs:
             echo "" >> guoneidaguize.yaml
           done < urls.txt
 
-      - name: Generate guowaichangyong.yaml
+      - name: 3.Generate guowaichangyong.yaml
         run: |
           cat > urls.txt <<EOF
           https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Google/Google_No_Resolve.yaml
@@ -100,7 +100,7 @@ jobs:
             echo "" >> guowaichangyong.yaml
           done < urls.txt
 
-      - name: Generate guowaidaguize.yaml
+      - name: 4.Generate guowaidaguize.yaml
         run: |
           cat > urls.txt <<EOF
           https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml
@@ -433,7 +433,7 @@ jobs:
             echo "" >> guowaidaguize.yaml
           done < urls.txt
 
-      - name: Commit & Push
+      - name: 5.Commit & Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
