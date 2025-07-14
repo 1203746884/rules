@@ -14,10 +14,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout your repo
+
+      - name: 1.Set timezone
+        run: |
+          sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+          echo "Asia/Shanghai" | sudo tee /etc/timezone
+
+      - name: 2.Checkout your repo
         uses: actions/checkout@v4
 
-      - name: 1.Generate guoneichangyong.yaml
+      - name: 3..Generate guoneichangyong.yaml
         run: |
           cat > urls.txt <<EOF
           https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/DouYin/DouYin_No_Resolve.yaml
@@ -48,7 +54,7 @@ jobs:
             echo "" >> guoneichangyong.yaml
           done < urls.txt
 
-      - name: 2.Generate guoneidaguize.yaml
+      - name: 4..Generate guoneidaguize.yaml
         run: |
           cat > urls.txt <<EOF
           https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaDNS/ChinaDNS_No_Resolve.yaml
@@ -73,7 +79,7 @@ jobs:
             echo "" >> guoneidaguize.yaml
           done < urls.txt
 
-      - name: 3.Generate guowaichangyong.yaml
+      - name: 5.Generate guowaichangyong.yaml
         run: |
           cat > urls.txt <<EOF
           https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Google/Google_No_Resolve.yaml
@@ -100,7 +106,7 @@ jobs:
             echo "" >> guowaichangyong.yaml
           done < urls.txt
 
-      - name: 4.Generate guowaidaguize.yaml
+      - name: 6..Generate guowaidaguize.yaml
         run: |
           cat > urls.txt <<EOF
           https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml
@@ -433,10 +439,17 @@ jobs:
             echo "" >> guowaidaguize.yaml
           done < urls.txt
 
-      - name: 5.Commit & Push
+      - name: 7..Commit & Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add *.yaml
           git commit -m "Update ruleset $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes"
           git push
+
+      - name: 8.push iphone
+        run: |
+          curl -X POST https://ddns.240205.xyz:35230/wait-check-post \
+          -H "Content-Type: application/json" \
+          -d "{\"title\":\"[规则更新] 更新成功\",\"body\":\"时间：$(date '+%Y-%m-%d %H:%M:%S')\\n主机：$HOSTNAME\\n事件类型：规则更新\\n状态：成功\\n详情：规则已更新成功\\n备注：无\"}"
+
