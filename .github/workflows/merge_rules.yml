@@ -1,0 +1,430 @@
+name: Merge Clash Rules from non-raw URLs
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout your repo
+        uses: actions/checkout@v4
+
+      - name: 1.Generate guoneichangyong.yaml
+        run: |
+          cat > urls.txt <<EOF
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/DouYin/DouYin_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/BiliBili/BiliBili_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Baidu/Baidu_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Pinduoduo/Pinduoduo_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/JingDong/JingDong_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/NetEaseMusic/NetEaseMusic_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/XiaoMi/XiaoMi_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AliPay/AliPay_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/WeChat/WeChat_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Alibaba/Alibaba_Classical_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/CCB/CCB_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GaoDe/GaoDe_No_Resolve.yaml
+
+          EOF
+
+          rm -f guoneichangyong.yaml
+          while read url; do
+            # 转换成 raw 链接
+            raw_url=${url/github.com/raw.githubusercontent.com}
+            raw_url=${raw_url/\/blob/}
+
+            echo "# From $raw_url" >> guoneichangyong.yaml
+            curl -sSL "$raw_url" >> guoneichangyong.yaml
+            echo "" >> guoneichangyong.yaml
+          done < urls.txt
+
+      - name: Generate guoneidaguize.yaml
+        run: |
+          cat > urls.txt <<EOF
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaDNS/ChinaDNS_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/China/China_Classical_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaMax/ChinaMax_Classical_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaIPs/ChinaIPs_Classical_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaIPsBGP/ChinaIPsBGP_Classical_No_Resolve.yaml
+
+
+          EOF
+
+          rm -f guoneidaguize.yaml
+          while read url; do
+            # 转换成 raw 链接
+            raw_url=${url/github.com/raw.githubusercontent.com}
+            raw_url=${raw_url/\/blob/}
+
+            echo "# From $raw_url" >> guoneidaguize.yaml
+            curl -sSL "$raw_url" >> guoneidaguize.yaml
+            echo "" >> guoneidaguize.yaml
+          done < urls.txt
+
+      - name: Generate guowaichangyong.yaml
+        run: |
+          cat > urls.txt <<EOF
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Google/Google_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GitHub/GitHub_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Wikipedia/Wikipedia_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GoogleFCM/GoogleFCM_No_Resolve.yaml
+          
+
+          EOF
+
+          rm -f guowaichangyong.yaml
+          while read url; do
+            # 转换成 raw 链接
+            raw_url=${url/github.com/raw.githubusercontent.com}
+            raw_url=${raw_url/\/blob/}
+
+            echo "# From $raw_url" >> guowaichangyong.yaml
+            curl -sSL "$raw_url" >> guowaichangyong.yaml
+            echo "" >> guowaichangyong.yaml
+          done < urls.txt
+
+      - name: Generate guowaidaguize.yaml
+        run: |
+          cat > urls.txt <<EOF
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Google/Google_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GoogleDrive/GoogleDrive_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/YouTubeMusic/YouTubeMusic_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GitHub/GitHub_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/OneDrive/OneDrive_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AppStore/AppStore_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/iCloud/iCloud_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TestFlight/TestFlight_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/FitnessPlus/FitnessPlus_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AppleMail/AppleMail_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AppleMusic/AppleMusic_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AppleNews/AppleNews_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AppleTV/AppleTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Siri/Siri_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Apple/Apple_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Global/Global_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Proxy/Proxy_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GlobalMedia/GlobalMedia_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Speedtest/Speedtest_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/KakaoTalk/KakaoTalk_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Line/Line_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Netflix/Netflix_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Dubox/Dubox_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Disney/Disney_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Twitter/Twitter_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Cloudflare/Cloudflare_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Facebook/Facebook_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Spotify/Spotify_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Wikipedia/Wikipedia_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Discord/Discord_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Mail/Mail_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/PayPal/PayPal_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Spark/Spark_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Sony/Sony_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/LastPass/LastPass_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/BBC/BBC_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Amazon/Amazon_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Instagram/Instagram_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Whatsapp/Whatsapp_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TeamViewer/TeamViewer_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AsianMedia/AsianMedia_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Bahamut/Bahamut_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Adobe/Adobe_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AFP/AFP_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ATTWatchTV/ATTWatchTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AbemaTV/AbemaTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/All4/All4_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AmazonPrimeVideo/AmazonPrimeVideo_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Americasvoice/Americasvoice_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AppleDaily/AppleDaily_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/BoXun/BoXun_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/CBS/CBS_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/CNN/CNN_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/CableTV/CableTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/DAZN/DAZN_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Dailymotion/Dailymotion_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Deezer/Deezer_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/EncoreTVB/EncoreTVB_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Fox/Fox_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/HBO/HBO_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/HWTV/HWTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Huffpost/Huffpost_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Hulu/Hulu_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ITV/ITV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/JOOX/JOOX_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Japonx/Japonx_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/KKBOX/KKBOX_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Kantv/Kantv_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/LiTV/LiTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/LineTV/LineTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/LondonReal/LondonReal_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/MOOV/MOOV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/MeWatch/MeWatch_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/My5/My5_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/NYPost/NYPost_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/NYTimes/NYTimes_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Nikkei/Nikkei_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/PBS/PBS_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Pandora/Pandora_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/PandoraTV/PandoraTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Qobuz/Qobuz_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/RTHK/RTHK_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/SkyGO/SkyGO_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/SoundCloud/SoundCloud_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TIDAL/TIDAL_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TVB/TVB_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TaiWanGood/TaiWanGood_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/VOA/VOA_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/VidolTV/VidolTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Viki/Viki_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Vimeo/Vimeo_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ViuTV/ViuTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Voxmedia/Voxmedia_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/WeTV/WeTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ZeeTV/ZeeTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/friDay/friDay_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/iTalkBB/iTalkBB_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AppleProxy/AppleProxy_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Clubhouse/Clubhouse_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ClubhouseIP/ClubhouseIP_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/9News/9News_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/9to5/9to5_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AOL/AOL_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Acer/Acer_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Adidas/Adidas_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Akamai/Akamai_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Apkpure/Apkpure_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Atlassian/Atlassian_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/BMW/BMW_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Bestbuy/Bestbuy_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Bloomberg/Bloomberg_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Blued/Blued_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/BrightCove/BrightCove_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Buypass/Buypass_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/CHT/CHT_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Canon/Canon_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Cisco/Cisco_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Comodo/Comodo_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/DMM/DMM_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Dailymail/Dailymail_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Dell/Dell_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/DigiCert/DigiCert_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Disqus/Disqus_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Docker/Docker_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Dropbox/Dropbox_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/DtDNS/DtDNS_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Duckduckgo/Duckduckgo_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/DynDNS/DynDNS_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Dynu/Dynu_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Emojipedia/Emojipedia_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Espn/Espn_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/FlipBoard/FlipBoard_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Gettyimages/Gettyimages_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Gigabyte/Gigabyte_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GitBook/GitBook_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GitLab/GitLab_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GlobalSign/GlobalSign_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Gucci/Gucci_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/HKBN/HKBN_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/HKedcity/HKedcity_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/HP/HP_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Heroku/Heroku_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/IBM/IBM_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/IMDB/IMDB_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Identrust/Identrust_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Imgur/Imgur_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Intel/Intel_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Jetbrains/Jetbrains_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Jfrog/Jfrog_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Jquery/Jquery_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Jsdelivr/Jsdelivr_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Jwplayer/Jwplayer_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/LG/LG_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/LastFM/LastFM_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/LivePerson/LivePerson_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Logitech/Logitech_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/MEGA/MEGA_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Mailru/Mailru_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Manorama/Manorama_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/McDonalds/McDonalds_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Mozilla/Mozilla_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Naver/Naver_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Nike/Nike_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Notion/Notion_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Nvidia/Nvidia_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Opera/Opera_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Oracle/Oracle_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Oreilly/Oreilly_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/PCCW/PCCW_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Picsee/Picsee_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Pinterest/Pinterest_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Pixiv/Pixiv_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Pixnet/Pixnet_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Protonmail/Protonmail_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Qualcomm/Qualcomm_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Rakuten/Rakuten_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Rarbg/Rarbg_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Razer/Razer_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Reddit/Reddit_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Samsung/Samsung_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Sectigo/Sectigo_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Shopee/Shopee_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Shopify/Shopify_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Slack/Slack_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Sling/Sling_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/SmarTone/SmarTone_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Snap/Snap_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/SourceForge/SourceForge_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Stackexchange/Stackexchange_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Starbucks/Starbucks_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/SublimeText/SublimeText_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ThomsonReuters/ThomsonReuters_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Tumblr/Tumblr_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Twitch/Twitch_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/VISA/VISA_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/VK/VK_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Vercel/Vercel_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Verisign/Verisign_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Verizon/Verizon_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/WIX/WIX_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Westerndigital/Westerndigital_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Wikimedia/Wikimedia_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Wordpress/Wordpress_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Yandex/Yandex_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Zee/Zee_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Zendesk/Zendesk_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Zoho/Zoho_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/eBay/eBay_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Intercom/Intercom_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Limelight/Limelight_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Python/Python_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Unity/Unity_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Cryptocurrency/Cryptocurrency_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TelegramNL/TelegramNL_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TelegramSG/TelegramSG_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TelegramUS/TelegramUS_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/PChomeTW/PChomeTW_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/MOMOShop/MOMOShop_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/PChome/PChome_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ProxyLite/ProxyLite_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Synology/Synology_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Dood/Dood_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Tesla/Tesla_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Embl/Embl_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/HashiCorp/HashiCorp_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Scaleflex/Scaleflex_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/CWSeed/CWSeed_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/EHGallery/EHGallery_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/FuboTV/FuboTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/NBC/NBC_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Faronics/Faronics_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Salesforce/Salesforce_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Ubuntu/Ubuntu_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/iQIYIIntl/iQIYIIntl_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GoogleFCM/GoogleFCM_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/QuickConnect/QuickConnect_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/HamiVideo/HamiVideo_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Emby/Emby_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/PikPak/PikPak_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Cake/Cake_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Binance/Binance_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GoogleEarth/GoogleEarth_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TeraBox/TeraBox_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/BritboxUK/BritboxUK_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/DigitalOcean/DigitalOcean_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/IKEA/IKEA_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/RemoteDesktop/RemoteDesktop_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/VikACG/VikACG_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/GlobalScholar/GlobalScholar_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Npmjs/Npmjs_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Sharethis/Sharethis_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Contentful/Contentful_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Hkgolden/Hkgolden_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Tmdb/Tmdb_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Entrust/Entrust_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Haveibeenpwned/Haveibeenpwned_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Cnet/Cnet_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Reabble/Reabble_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Movefree/Movefree_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Linguee/Linguee_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Figma/Figma_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TrustWave/TrustWave_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Pubmatic/Pubmatic_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/SlideShare/SlideShare_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Flurry/Flurry_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Collabora/Collabora_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/CyberTrust/CyberTrust_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Patreon/Patreon_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Addthis/Addthis_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/FreeCodeCamp/FreeCodeCamp_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Arphic/Arphic_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/1337x/1337x_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/4chan/4chan_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/6park/6park_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Accuweather/Accuweather_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Actalis/Actalis_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/NaSDDNS/NaSDDNS_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/NivodTV/NivodTV_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Olevod/Olevod_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Claude/Claude_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ChinaDNS/ChinaDNS_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Crypto/Crypto_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/MIUIPrivacy/MIUIPrivacy_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AdColony/AdColony_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AddToAny/AddToAny_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AdobeActivation/AdobeActivation_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Aerogard/Aerogard_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Afdian/Afdian_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AirWick/AirWick_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/ALJazeera/ALJazeera_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AmazonTrust/AmazonTrust_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AMD/AMD_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AMP/AMP_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Anaconda/Anaconda_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AnandTech/AnandTech_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Android/Android_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Anime/Anime_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Anonv/Anonv_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Anthropic/Anthropic_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/APKCombo/APKCombo_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/AppLovin/AppLovin_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Threads/Threads_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Duolingo/Duolingo_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Civitai/Civitai_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/LinkedIn/LinkedIn_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/OKX/OKX_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/TruthSocial/TruthSocial_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Zalo/Zalo_No_Resolve.yaml
+          https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Gemini/Gemini_No_Resolve.yaml
+
+          EOF
+
+          rm -f guowaidaguize.yaml
+          while read url; do
+            # 转换成 raw 链接
+            raw_url=${url/github.com/raw.githubusercontent.com}
+            raw_url=${raw_url/\/blob/}
+
+            echo "# From $raw_url" >> guowaidaguize.yaml
+            curl -sSL "$raw_url" >> guowaidaguize.yaml
+            echo "" >> guowaidaguize.yaml
+          done < urls.txt
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add *.yaml
+          git commit -m "Update ruleset $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes"
+          git push
