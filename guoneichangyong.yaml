@@ -1,6 +1,4 @@
-payload:
-
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouYin/DouYin_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouYin/DouYin_No_Resolve.yaml
 # NAME: DouYin
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -8,6 +6,7 @@ payload:
 # DOMAIN: 2
 # DOMAIN-SUFFIX: 11
 # TOTAL: 13
+payload:
   - DOMAIN,lf3-static.bytednsdoc.com
   - DOMAIN,v5-dy-o-abtest.zjcdn.com
   - DOMAIN-SUFFIX,amemv.com
@@ -21,9 +20,8 @@ payload:
   - DOMAIN-SUFFIX,pstatp.com
   - DOMAIN-SUFFIX,snssdk.com
   - DOMAIN-SUFFIX,toutiao.com
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouYin/DouYin_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili_No_Resolve.yaml
 # NAME: BiliBili
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -33,6 +31,7 @@ payload:
 # IP-CIDR: 8
 # PROCESS-NAME: 6
 # TOTAL: 129
+payload:
   - DOMAIN,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com
   - DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com
   - DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3z.ourdvsss.com
@@ -162,15 +161,15 @@ payload:
   - PROCESS-NAME,com.bilibili.comic.intl
   - PROCESS-NAME,tv.danmaku.bili
   - PROCESS-NAME,tv.danmaku.bilibilihd
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Baidu/Baidu_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Baidu/Baidu_No_Resolve.yaml
 # NAME: Baidu
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2025-06-06 09:17:01
 # DOMAIN-SUFFIX: 251
 # TOTAL: 251
+payload:
   - DOMAIN-SUFFIX,17swan.com
   - DOMAIN-SUFFIX,37swan.com
   - DOMAIN-SUFFIX,91.com
@@ -422,27 +421,27 @@ payload:
   - DOMAIN-SUFFIX,zuoyebang.cc
   - DOMAIN-SUFFIX,zuoyebang.com
   - DOMAIN-SUFFIX,zybang.com
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Baidu/Baidu_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pinduoduo/Pinduoduo_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pinduoduo/Pinduoduo_No_Resolve.yaml
 # NAME: Pinduoduo
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2025-06-06 09:17:01
 # DOMAIN-SUFFIX: 3
 # TOTAL: 3
+payload:
   - DOMAIN-SUFFIX,pddpic.com
   - DOMAIN-SUFFIX,pinduoduo.com
   - DOMAIN-SUFFIX,yangkeduo.com
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pinduoduo/Pinduoduo_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/JingDong/JingDong_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/JingDong/JingDong_No_Resolve.yaml
 # NAME: JingDong
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2025-06-06 09:17:35
 # DOMAIN-SUFFIX: 248
 # TOTAL: 248
+payload:
   - DOMAIN-SUFFIX,1huizhan.com
   - DOMAIN-SUFFIX,3.cn
   - DOMAIN-SUFFIX,300hu.com
@@ -691,9 +690,8 @@ payload:
   - DOMAIN-SUFFIX,yixun.com
   - DOMAIN-SUFFIX,yiyaojd.com
   - DOMAIN-SUFFIX,yizhitou.com
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/JingDong/JingDong_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic_No_Resolve.yaml
 # NAME: NetEaseMusic
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -702,6 +700,7 @@ payload:
 # DOMAIN-SUFFIX: 9
 # IP-CIDR: 18
 # TOTAL: 28
+payload:
   - DOMAIN,netease.ugcvideoss.ourdvs.com
   - DOMAIN-SUFFIX,163yun.com
   - DOMAIN-SUFFIX,api.iplay.163.com
@@ -730,9 +729,8 @@ payload:
   - IP-CIDR,59.111.128.0/17,no-resolve
   - IP-CIDR,59.111.19.33/32,no-resolve
   - IP-CIDR,59.111.21.14/31,no-resolve
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/XiaoMi/XiaoMi_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/XiaoMi/XiaoMi_No_Resolve.yaml
 # NAME: XiaoMi
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -741,6 +739,7 @@ payload:
 # IP-CIDR: 5
 # PROCESS-NAME: 2
 # TOTAL: 144
+payload:
   - DOMAIN-SUFFIX,408399.com
   - DOMAIN-SUFFIX,408399.net
   - DOMAIN-SUFFIX,816798.net
@@ -885,15 +884,15 @@ payload:
   - IP-CIDR,58.220.59.2/32,no-resolve
   - PROCESS-NAME,com.xiaomi.mibrain.speech
   - PROCESS-NAME,小米云服务.exe
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/XiaoMi/XiaoMi_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AliPay/AliPay_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AliPay/AliPay_No_Resolve.yaml
 # NAME: AliPay
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2025-06-06 09:17:31
 # DOMAIN-SUFFIX: 21
 # TOTAL: 21
+payload:
   - DOMAIN-SUFFIX,alipay
   - DOMAIN-SUFFIX,alipay-corp.com
   - DOMAIN-SUFFIX,alipay-eco.com
@@ -915,9 +914,8 @@ payload:
   - DOMAIN-SUFFIX,ifaa.org.cn
   - DOMAIN-SUFFIX,luohanacademy.com
   - DOMAIN-SUFFIX,sinopayment.com.cn
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AliPay/AliPay_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat_No_Resolve.yaml
 # NAME: WeChat
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -926,6 +924,7 @@ payload:
 # DOMAIN-SUFFIX: 22
 # IP-ASN: 1
 # TOTAL: 31
+payload:
   - DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
   - DOMAIN,btrace.qq.com
   - DOMAIN,dldir1.qq.com
@@ -957,9 +956,8 @@ payload:
   - DOMAIN-SUFFIX,wxs.qq.com
   - DOMAIN-SUFFIX,yun-hl.3g.qq.com
   - IP-ASN,132203,no-resolve
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Alibaba/Alibaba_Classical_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Alibaba/Alibaba_Classical_No_Resolve.yaml
 # NAME: Alibaba
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -969,6 +967,7 @@ payload:
 # IP-CIDR6: 1
 # PROCESS-NAME: 1
 # TOTAL: 1306
+payload:
   - DOMAIN-SUFFIX,10029.com
   - DOMAIN-SUFFIX,1688.com
   - DOMAIN-SUFFIX,17lai.org
@@ -2275,15 +2274,15 @@ payload:
   - IP-CIDR,8.208.0.0/12,no-resolve
   - IP-CIDR6,2400:b200::/32,no-resolve
   - PROCESS-NAME,com.taobao.taobao
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Alibaba/Alibaba_Classical_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/CCB/CCB_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/CCB/CCB_No_Resolve.yaml
 # NAME: CCB
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2025-06-06 09:17:31
 # DOMAIN-SUFFIX: 18
 # TOTAL: 18
+payload:
   - DOMAIN-SUFFIX,ccb-life.com.cn
   - DOMAIN-SUFFIX,ccb.cn
   - DOMAIN-SUFFIX,ccb.com
@@ -2302,15 +2301,15 @@ payload:
   - DOMAIN-SUFFIX,ccbseoul.com
   - DOMAIN-SUFFIX,ccbtrust.com.cn
   - DOMAIN-SUFFIX,ccbxt.com
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/CCB/CCB_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GaoDe/GaoDe_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GaoDe/GaoDe_No_Resolve.yaml
 # NAME: GaoDe
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2025-06-06 09:17:34
 # DOMAIN-SUFFIX: 9
 # TOTAL: 9
+payload:
   - DOMAIN-SUFFIX,a-map.cn
   - DOMAIN-SUFFIX,a-map.co
   - DOMAIN-SUFFIX,a-map.link
@@ -2320,4 +2319,4 @@ payload:
   - DOMAIN-SUFFIX,anav.com
   - DOMAIN-SUFFIX,autonavi.com
   - DOMAIN-SUFFIX,gaode.com
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GaoDe/GaoDe_No_Resolve.yaml ---
+

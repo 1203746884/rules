@@ -1,6 +1,4 @@
-payload:
-
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google_No_Resolve.yaml
 # NAME: Google
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -12,6 +10,7 @@ payload:
 # IP-CIDR6: 1
 # PROCESS-NAME: 6
 # TOTAL: 707
+payload:
   - DOMAIN,voice.telephony.goog
   - DOMAIN-SUFFIX,0emm.com
   - DOMAIN-SUFFIX,1e100.net
@@ -719,9 +718,8 @@ payload:
   - PROCESS-NAME,com.google.android.gsf
   - PROCESS-NAME,com.google.android.play.games
   - PROCESS-NAME,BackupandSync
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml
 # NAME: OpenAI
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -732,6 +730,7 @@ payload:
 # IP-ASN: 1
 # IP-CIDR: 2
 # TOTAL: 35
+payload:
   - DOMAIN,browser-intake-datadoghq.com
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
   - DOMAIN,openai-api.arkoselabs.com
@@ -767,9 +766,8 @@ payload:
   - IP-CIDR,24.199.123.28/32,no-resolve
   - IP-CIDR,64.23.132.171/32,no-resolve
   - IP-ASN,20473,no-resolve
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml
 # NAME: YouTube
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -779,6 +777,7 @@ payload:
 # IP-CIDR: 2
 # IP-CIDR6: 1
 # TOTAL: 183
+payload:
   - DOMAIN-SUFFIX,ggpht.cn
   - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,googlevideo.com
@@ -962,9 +961,8 @@ payload:
   - IP-CIDR,172.110.32.0/21,no-resolve
   - IP-CIDR,216.73.80.0/20,no-resolve
   - IP-CIDR6,2620:120:e000::/40,no-resolve
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub_No_Resolve.yaml
 # NAME: GitHub
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -972,6 +970,7 @@ payload:
 # DOMAIN-KEYWORD: 1
 # DOMAIN-SUFFIX: 30
 # TOTAL: 31
+payload:
   - DOMAIN-SUFFIX,atom.io
   - DOMAIN-SUFFIX,dependabot.com
   - DOMAIN-SUFFIX,ghcr.io
@@ -1003,9 +1002,8 @@ payload:
   - DOMAIN-SUFFIX,repo.new
   - DOMAIN-SUFFIX,thegithubshop.com
   - DOMAIN-KEYWORD,github
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml
 # NAME: Telegram
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -1018,6 +1016,7 @@ payload:
 # IP-CIDR6: 4
 # PROCESS-NAME: 6
 # TOTAL: 44
+payload:
   - DOMAIN,api.imem.app
   - DOMAIN,api.swiftgram.app
   - DOMAIN-SUFFIX,cdn-telegram.org
@@ -1062,15 +1061,15 @@ payload:
   - IP-ASN,59930,no-resolve
   - IP-ASN,62014,no-resolve
   - IP-ASN,62041,no-resolve
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia_No_Resolve.yaml
 # NAME: Wikipedia
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2025-06-06 09:16:55
 # DOMAIN-SUFFIX: 12
 # TOTAL: 12
+payload:
   - DOMAIN-SUFFIX,mediawiki.org
   - DOMAIN-SUFFIX,wikibooks.org
   - DOMAIN-SUFFIX,wikidata.org
@@ -1083,9 +1082,8 @@ payload:
   - DOMAIN-SUFFIX,wikiversity.org
   - DOMAIN-SUFFIX,wikivoyage.org
   - DOMAIN-SUFFIX,wiktionary.org
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia_No_Resolve.yaml ---
 
-# --- START OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM_No_Resolve.yaml ---
+# From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM_No_Resolve.yaml
 # NAME: GoogleFCM
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
@@ -1093,6 +1091,7 @@ payload:
 # DOMAIN: 15
 # IP-CIDR: 26
 # TOTAL: 41
+payload:
   - DOMAIN,alt1-mtalk.google.com
   - DOMAIN,alt2-mtalk.google.com
   - DOMAIN,alt3-mtalk.google.com
@@ -1134,9 +1133,4 @@ payload:
   - IP-CIDR,74.125.23.188/32,no-resolve
   - IP-CIDR,74.125.24.188/32,no-resolve
   - IP-CIDR,74.125.28.188/32,no-resolve
-# --- END OF FILE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM_No_Resolve.yaml ---
 
-#这里不加标志位，就能实现在这里补充一些需要代理的
-  - DOMAIN-SUFFIX,browserleaks.com
-  - DOMAIN-SUFFIX,xiaomiflash.com
-  - DOMAIN-SUFFIX,xiaomirom.com
