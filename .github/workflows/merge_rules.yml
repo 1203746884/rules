@@ -2,7 +2,7 @@ name: Merge Clash Rules from non-raw URLs
 
 on:
   schedule:
-    - cron: "48 1 * * *"
+    - cron: "49 1 * * *"
   workflow_dispatch:
 
 permissions:
