@@ -2,7 +2,8 @@ name: Merge Clash Rules from non-raw URLs
 
 on:
   schedule:
-    - cron: "49 1 * * *"
+    # 这里的写的UTC时间，北京时间为凌晨3点
+    - cron: "3 2 * * *"
   workflow_dispatch:
 
 permissions:
