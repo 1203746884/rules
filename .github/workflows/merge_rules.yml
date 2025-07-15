@@ -1,9 +1,9 @@
 name: Merge Clash Rules from non-raw URLs
 
 on:
-  schedule:
+  #schedule: (这里不能准时执行，现在已经用cloudflare来定时调用github的action来手动执行了，还是北京事件凌晨3点 utc时间19点)
     # 这里的写的UTC时间，北京时间为凌晨3点
-    - cron: "7 2 * * *"
+    # - cron: "0 19 * * *"
   workflow_dispatch:
 
 permissions:
