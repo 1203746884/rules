@@ -2081,13 +2081,13 @@ payload:
 # NAME: Proxy
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-07-30 02:08:16
+# UPDATED: 2025-08-01 02:08:05
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 6508
+# DOMAIN-SUFFIX: 6509
 # IP-CIDR: 93
 # IP-CIDR6: 4
-# TOTAL: 6640
+# TOTAL: 6641
 payload:
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
@@ -3380,24 +3380,27 @@ payload:
 # NAME: TikTok
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:16:55
-# DOMAIN: 3
+# UPDATED: 2025-08-01 02:08:07
+# DOMAIN: 4
 # DOMAIN-KEYWORD: 2
-# DOMAIN-SUFFIX: 22
+# DOMAIN-SUFFIX: 24
 # PROCESS-NAME: 1
-# TOTAL: 28
+# TOTAL: 31
 payload:
   - DOMAIN,lf16-effectcdn.byteeffecttos-g.com
   - DOMAIN,lf16-pkgcdn.pitaya-clientai.com
   - DOMAIN,p16-tiktokcdn-com.akamaized.net
+  - DOMAIN,trae-api-sg.mchost.guru
   - DOMAIN-SUFFIX,bytedapm.com
   - DOMAIN-SUFFIX,bytegecko-i18n.com
+  - DOMAIN-SUFFIX,byteintlapi.com
   - DOMAIN-SUFFIX,byteoversea.com
   - DOMAIN-SUFFIX,capcut.com
   - DOMAIN-SUFFIX,ibytedtos.com
   - DOMAIN-SUFFIX,ibyteimg.com
   - DOMAIN-SUFFIX,ipstatp.com
   - DOMAIN-SUFFIX,isnssdk.com
+  - DOMAIN-SUFFIX,marscode.com
   - DOMAIN-SUFFIX,muscdn.com
   - DOMAIN-SUFFIX,musical.ly
   - DOMAIN-SUFFIX,sgpstatp.com
@@ -6407,12 +6410,27 @@ payload:
 # NAME: SkyGO
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:17:00
-# DOMAIN-SUFFIX: 2
-# TOTAL: 2
+# UPDATED: 2025-08-01 02:08:12
+# DOMAIN: 3
+# DOMAIN-KEYWORD: 3
+# DOMAIN-SUFFIX: 9
+# TOTAL: 15
 payload:
+  - DOMAIN,7d1732c7c34624df5f1270e29cf8d1ea78695fd5.cws.conviva.com
+  - DOMAIN,clientstream.launchdarkly.com
+  - DOMAIN,sky.com.ssl.d1.sc.omtrdc.net
+  - DOMAIN-SUFFIX,2cnt.net
+  - DOMAIN-SUFFIX,epgsky.com
+  - DOMAIN-SUFFIX,eu-1.xcal.tv
   - DOMAIN-SUFFIX,sky.com
+  - DOMAIN-SUFFIX,skyanywhere.com
+  - DOMAIN-SUFFIX,skycdp.com
   - DOMAIN-SUFFIX,skygo.co.nz
+  - DOMAIN-SUFFIX,skysports.com
+  - DOMAIN-SUFFIX,xmidt-eu.comcast.net
+  - DOMAIN-KEYWORD,bskyb
+  - DOMAIN-KEYWORD,skygo
+  - DOMAIN-KEYWORD,skyliveuk
 
 # From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SoundCloud/SoundCloud_No_Resolve.yaml
 # NAME: SoundCloud
