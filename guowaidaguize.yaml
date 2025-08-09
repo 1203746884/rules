@@ -1914,14 +1914,14 @@ payload:
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-08-06 02:08:05
+# UPDATED: 2025-08-10 02:07:38
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31567
+# DOMAIN-SUFFIX: 31568
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
-# TOTAL: 31830
+# TOTAL: 31831
 payload:
   - DOMAIN-KEYWORD,amazon
   - DOMAIN-KEYWORD,avoddashs
@@ -2081,13 +2081,13 @@ payload:
 # NAME: Proxy
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-08-06 02:08:25
+# UPDATED: 2025-08-10 02:07:58
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 6511
+# DOMAIN-SUFFIX: 6514
 # IP-CIDR: 93
 # IP-CIDR6: 4
-# TOTAL: 6643
+# TOTAL: 6646
 payload:
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
@@ -3380,12 +3380,12 @@ payload:
 # NAME: TikTok
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-08-01 02:08:07
+# UPDATED: 2025-08-10 02:08:00
 # DOMAIN: 4
 # DOMAIN-KEYWORD: 2
-# DOMAIN-SUFFIX: 24
+# DOMAIN-SUFFIX: 25
 # PROCESS-NAME: 1
-# TOTAL: 31
+# TOTAL: 32
 payload:
   - DOMAIN,lf16-effectcdn.byteeffecttos-g.com
   - DOMAIN,lf16-pkgcdn.pitaya-clientai.com
@@ -3414,6 +3414,7 @@ payload:
   - DOMAIN-SUFFIX,tiktokmusic.app
   - DOMAIN-SUFFIX,tiktokv.com
   - DOMAIN-SUFFIX,tiktokv.us
+  - DOMAIN-SUFFIX,trae.ai
   - DOMAIN-SUFFIX,ttwebview.com
   - DOMAIN-KEYWORD,musical.ly
   - DOMAIN-KEYWORD,tiktok
