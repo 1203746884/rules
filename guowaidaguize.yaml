@@ -197,14 +197,14 @@ payload:
 # NAME: Google
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:15:10
+# UPDATED: 2025-12-08 02:06:19
 # DOMAIN: 1
 # DOMAIN-KEYWORD: 5
-# DOMAIN-SUFFIX: 690
+# DOMAIN-SUFFIX: 691
 # IP-CIDR: 4
 # IP-CIDR6: 1
 # PROCESS-NAME: 6
-# TOTAL: 707
+# TOTAL: 708
 payload:
   - DOMAIN,voice.telephony.goog
   - DOMAIN-SUFFIX,0emm.com
@@ -345,6 +345,7 @@ payload:
   - DOMAIN-SUFFIX,bumptop.net
   - DOMAIN-SUFFIX,bumptop.org
   - DOMAIN-SUFFIX,bumptunes.com
+  - DOMAIN-SUFFIX,c.gle
   - DOMAIN-SUFFIX,campuslondon.com
   - DOMAIN-SUFFIX,capitalg.com
   - DOMAIN-SUFFIX,certificate-transparency.dev
@@ -986,14 +987,15 @@ payload:
 # NAME: OneDrive
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:15:10
+# UPDATED: 2025-12-08 02:06:20
 # DOMAIN-KEYWORD: 3
-# DOMAIN-SUFFIX: 12
+# DOMAIN-SUFFIX: 13
 # PROCESS-NAME: 2
-# TOTAL: 17
+# TOTAL: 18
 payload:
   - DOMAIN-SUFFIX,1drv.com
   - DOMAIN-SUFFIX,livefilestore.com
+  - DOMAIN-SUFFIX,microsoftpersonalcontent.com
   - DOMAIN-SUFFIX,oneclient.sfx.ms
   - DOMAIN-SUFFIX,onedrive.com
   - DOMAIN-SUFFIX,onedrive.live.com
@@ -1014,12 +1016,12 @@ payload:
 # NAME: Microsoft
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:15:10
+# UPDATED: 2025-12-08 02:06:20
 # DOMAIN: 1
 # DOMAIN-KEYWORD: 4
-# DOMAIN-SUFFIX: 662
+# DOMAIN-SUFFIX: 663
 # PROCESS-NAME: 2
-# TOTAL: 669
+# TOTAL: 670
 payload:
   - DOMAIN,vsmarketplacebadge.apphb.com
   - DOMAIN-SUFFIX,1drv.ms
@@ -1680,6 +1682,7 @@ payload:
   - DOMAIN-SUFFIX,yammerusercontent.com
   - DOMAIN-SUFFIX,1drv.com
   - DOMAIN-SUFFIX,livefilestore.com
+  - DOMAIN-SUFFIX,microsoftpersonalcontent.com
   - DOMAIN-SUFFIX,onedrive.com
   - DOMAIN-SUFFIX,sharepoint.com
   - DOMAIN-SUFFIX,sharepointonline.com
@@ -1914,14 +1917,14 @@ payload:
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-12-06 02:08:12
-# DOMAIN: 114
+# UPDATED: 2025-12-08 02:07:44
+# DOMAIN: 113
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 32219
+# DOMAIN-SUFFIX: 32229
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
-# TOTAL: 32486
+# TOTAL: 32495
 payload:
   - DOMAIN-KEYWORD,amazon
   - DOMAIN-KEYWORD,avoddashs
@@ -2217,14 +2220,14 @@ payload:
 # NAME: GlobalMedia
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-08-12 02:08:07
-# DOMAIN: 36
+# UPDATED: 2025-12-08 02:08:06
+# DOMAIN: 37
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 1272
+# DOMAIN-SUFFIX: 1275
 # IP-CIDR: 918
 # IP-CIDR6: 6
 # PROCESS-NAME: 3
-# TOTAL: 2261
+# TOTAL: 2265
 payload:
   - DOMAIN-KEYWORD,abematv.akamaized.net
   - DOMAIN-KEYWORD,anthropic
