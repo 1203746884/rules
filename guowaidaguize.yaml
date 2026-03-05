@@ -1709,10 +1709,10 @@ payload:
 # NAME: iCloud
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:15:11
+# UPDATED: 2026-03-06 02:37:18
 # DOMAIN-KEYWORD: 1
-# DOMAIN-SUFFIX: 58
-# TOTAL: 59
+# DOMAIN-SUFFIX: 59
+# TOTAL: 60
 payload:
   - DOMAIN-SUFFIX,apple-cloudkit.com
   - DOMAIN-SUFFIX,apple-icloud.cn
@@ -1728,6 +1728,7 @@ payload:
   - DOMAIN-SUFFIX,icloud-sandbox.com
   - DOMAIN-SUFFIX,icloud.apple.com
   - DOMAIN-SUFFIX,icloud.ch
+  - DOMAIN-SUFFIX,icloud.cn
   - DOMAIN-SUFFIX,icloud.com
   - DOMAIN-SUFFIX,icloud.com.cn
   - DOMAIN-SUFFIX,icloud.de
@@ -1874,14 +1875,14 @@ payload:
 # NAME: Apple
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-02-10 02:18:44
+# UPDATED: 2026-03-06 02:37:19
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 7
-# DOMAIN-SUFFIX: 1550
+# DOMAIN-SUFFIX: 1551
 # IP-CIDR: 10
 # IP-CIDR6: 3
 # PROCESS-NAME: 13
-# TOTAL: 1592
+# TOTAL: 1593
 payload:
   - DOMAIN-KEYWORD,apple-support.akadns.net
   - DOMAIN-KEYWORD,apple.com.akadns.net
@@ -1921,14 +1922,14 @@ payload:
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-03-04 02:17:25
+# UPDATED: 2026-03-06 02:38:36
 # DOMAIN: 118
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 32874
+# DOMAIN-SUFFIX: 32883
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
-# TOTAL: 33145
+# TOTAL: 33154
 payload:
   - DOMAIN-KEYWORD,amazon
   - DOMAIN-KEYWORD,avoddashs
@@ -2088,13 +2089,13 @@ payload:
 # NAME: Proxy
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-03-04 02:17:46
+# UPDATED: 2026-03-06 02:38:57
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 6576
+# DOMAIN-SUFFIX: 6579
 # IP-CIDR: 93
 # IP-CIDR6: 4
-# TOTAL: 6708
+# TOTAL: 6711
 payload:
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
