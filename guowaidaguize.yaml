@@ -6463,36 +6463,7 @@ payload:
   - DOMAIN-SUFFIX,wimpmusic.com
 
 # From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TVB/TVB_No_Resolve.yaml
-# NAME: TVB
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:17:00
-# DOMAIN: 3
-# DOMAIN-SUFFIX: 18
-# TOTAL: 21
-payload:
-  - DOMAIN,bcbolt446c5271-a.akamaihd.net
-  - DOMAIN,edge.api.brightcove.com
-  - DOMAIN,tvbtracking.azurewebsites.net
-  - DOMAIN-SUFFIX,bigbigchannel.com.hk
-  - DOMAIN-SUFFIX,bigbigshop.com
-  - DOMAIN-SUFFIX,content.jwplatform.com
-  - DOMAIN-SUFFIX,encoretvb.com
-  - DOMAIN-SUFFIX,mytvsuper.com
-  - DOMAIN-SUFFIX,mytvsuperlimited.hb.omtrdc.net
-  - DOMAIN-SUFFIX,mytvsuperlimited.sc.omtrdc.net
-  - DOMAIN-SUFFIX,tvb.com
-  - DOMAIN-SUFFIX,tvb.com.au
-  - DOMAIN-SUFFIX,tvbanywhere.com
-  - DOMAIN-SUFFIX,tvbanywhere.com.sg
-  - DOMAIN-SUFFIX,tvbc.com.cn
-  - DOMAIN-SUFFIX,tvbeventpower.com.hk
-  - DOMAIN-SUFFIX,tvbusa.com
-  - DOMAIN-SUFFIX,tvbweekly.com
-  - DOMAIN-SUFFIX,tvmedia.net.au
-  - DOMAIN-SUFFIX,videos-f.jwpsrv.com
-  - DOMAIN-SUFFIX,youboranqs01.com
-
+400: Invalid request
 # From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TaiWanGood/TaiWanGood_No_Resolve.yaml
 # NAME: TaiWanGood
 # AUTHOR: blackmatrix7
@@ -11134,19 +11105,7 @@ payload:
   - IP-CIDR6,2001:b28:f23d::/48,no-resolve
 
 # From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PChomeTW/PChomeTW_No_Resolve.yaml
-# NAME: PChomeTW
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:17:51
-# DOMAIN-SUFFIX: 5
-# TOTAL: 5
-payload:
-  - DOMAIN-SUFFIX,ecapi-pchome.cdn.hinet.net
-  - DOMAIN-SUFFIX,ecimg.tw
-  - DOMAIN-SUFFIX,pchome.com.tw
-  - DOMAIN-SUFFIX,pchomepay.com.tw
-  - DOMAIN-SUFFIX,pcloud.tw
-
+400: Invalid request
 # From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/MOMOShop/MOMOShop_No_Resolve.yaml
 # NAME: MOMOShop
 # AUTHOR: blackmatrix7
