@@ -1915,14 +1915,14 @@ payload:
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-06-26 02:48:38
+# UPDATED: 2026-06-28 02:29:22
 # DOMAIN: 125
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 34488
+# DOMAIN-SUFFIX: 34489
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
-# TOTAL: 34766
+# TOTAL: 34767
 payload:
   - DOMAIN-KEYWORD,amazon
   - DOMAIN-KEYWORD,avoddashs
@@ -2082,13 +2082,13 @@ payload:
 # NAME: Proxy
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-06-26 02:48:57
+# UPDATED: 2026-06-28 02:29:41
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 6730
+# DOMAIN-SUFFIX: 6731
 # IP-CIDR: 93
 # IP-CIDR6: 4
-# TOTAL: 6862
+# TOTAL: 6863
 payload:
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
@@ -6463,7 +6463,36 @@ payload:
   - DOMAIN-SUFFIX,wimpmusic.com
 
 # From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TVB/TVB_No_Resolve.yaml
-400: Invalid request
+# NAME: TVB
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:00
+# DOMAIN: 3
+# DOMAIN-SUFFIX: 18
+# TOTAL: 21
+payload:
+  - DOMAIN,bcbolt446c5271-a.akamaihd.net
+  - DOMAIN,edge.api.brightcove.com
+  - DOMAIN,tvbtracking.azurewebsites.net
+  - DOMAIN-SUFFIX,bigbigchannel.com.hk
+  - DOMAIN-SUFFIX,bigbigshop.com
+  - DOMAIN-SUFFIX,content.jwplatform.com
+  - DOMAIN-SUFFIX,encoretvb.com
+  - DOMAIN-SUFFIX,mytvsuper.com
+  - DOMAIN-SUFFIX,mytvsuperlimited.hb.omtrdc.net
+  - DOMAIN-SUFFIX,mytvsuperlimited.sc.omtrdc.net
+  - DOMAIN-SUFFIX,tvb.com
+  - DOMAIN-SUFFIX,tvb.com.au
+  - DOMAIN-SUFFIX,tvbanywhere.com
+  - DOMAIN-SUFFIX,tvbanywhere.com.sg
+  - DOMAIN-SUFFIX,tvbc.com.cn
+  - DOMAIN-SUFFIX,tvbeventpower.com.hk
+  - DOMAIN-SUFFIX,tvbusa.com
+  - DOMAIN-SUFFIX,tvbweekly.com
+  - DOMAIN-SUFFIX,tvmedia.net.au
+  - DOMAIN-SUFFIX,videos-f.jwpsrv.com
+  - DOMAIN-SUFFIX,youboranqs01.com
+
 # From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TaiWanGood/TaiWanGood_No_Resolve.yaml
 # NAME: TaiWanGood
 # AUTHOR: blackmatrix7
@@ -11105,7 +11134,19 @@ payload:
   - IP-CIDR6,2001:b28:f23d::/48,no-resolve
 
 # From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PChomeTW/PChomeTW_No_Resolve.yaml
-400: Invalid request
+# NAME: PChomeTW
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2025-06-06 09:17:51
+# DOMAIN-SUFFIX: 5
+# TOTAL: 5
+payload:
+  - DOMAIN-SUFFIX,ecapi-pchome.cdn.hinet.net
+  - DOMAIN-SUFFIX,ecimg.tw
+  - DOMAIN-SUFFIX,pchome.com.tw
+  - DOMAIN-SUFFIX,pchomepay.com.tw
+  - DOMAIN-SUFFIX,pcloud.tw
+
 # From https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/MOMOShop/MOMOShop_No_Resolve.yaml
 # NAME: MOMOShop
 # AUTHOR: blackmatrix7
