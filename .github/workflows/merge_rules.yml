@@ -449,6 +449,7 @@ jobs:
           git push
 
       - name: 8.push iphone
+        if: always()
         run: |
           curl -sS -X POST https://ddns.240205.xyz:35233/wait-check-post \
           -H "Content-Type: application/json" \
