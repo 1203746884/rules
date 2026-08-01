@@ -1916,14 +1916,14 @@ payload:
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-07-30 03:04:18
+# UPDATED: 2026-08-01 03:14:48
 # DOMAIN: 128
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 34591
+# DOMAIN-SUFFIX: 34613
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
-# TOTAL: 34872
+# TOTAL: 34894
 payload:
   - DOMAIN-KEYWORD,amazon
   - DOMAIN-KEYWORD,avoddashs
@@ -2083,13 +2083,13 @@ payload:
 # NAME: Proxy
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-07-30 03:04:41
+# UPDATED: 2026-08-01 03:15:08
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 6756
+# DOMAIN-SUFFIX: 6757
 # IP-CIDR: 93
 # IP-CIDR6: 4
-# TOTAL: 6888
+# TOTAL: 6889
 payload:
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
@@ -6668,18 +6668,16 @@ payload:
 # NAME: WeTV
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:17:00
+# UPDATED: 2026-08-01 03:15:15
 # DOMAIN: 1
-# DOMAIN-SUFFIX: 7
+# DOMAIN-SUFFIX: 5
 # IP-CIDR: 1
 # PROCESS-NAME: 2
-# TOTAL: 11
+# TOTAL: 9
 payload:
   - DOMAIN,wetv.qq.com
   - DOMAIN-SUFFIX,iflix-images.akamaized.net
   - DOMAIN-SUFFIX,iflix.com
-  - DOMAIN-SUFFIX,v.smtcdns.com
-  - DOMAIN-SUFFIX,v.smtcdns.net
   - DOMAIN-SUFFIX,vv.video.qq.com
   - DOMAIN-SUFFIX,wetv.vip
   - DOMAIN-SUFFIX,wetvinfo.com
