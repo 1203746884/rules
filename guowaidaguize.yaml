@@ -1916,14 +1916,14 @@ payload:
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-10-02 06:15:53
+# UPDATED: 2026-10-04 04:29:12
 # DOMAIN: 128
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 34780
+# DOMAIN-SUFFIX: 34783
 # IP-CIDR: 115
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
-# TOTAL: 35064
+# TOTAL: 35067
 payload:
   - DOMAIN-KEYWORD,amazon
   - DOMAIN-KEYWORD,avoddashs
@@ -2086,13 +2086,13 @@ payload:
 # NAME: Proxy
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-10-02 06:16:16
+# UPDATED: 2026-10-04 04:29:34
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 6791
+# DOMAIN-SUFFIX: 6795
 # IP-CIDR: 96
 # IP-CIDR6: 4
-# TOTAL: 6926
+# TOTAL: 6930
 payload:
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
@@ -11186,13 +11186,13 @@ payload:
 # NAME: ProxyLite
 # AUTHOR: blackmatrix7
 # REPO: https://gitlab.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-09-28 04:43:46
+# UPDATED: 2026-10-04 04:30:29
 # DOMAIN: 24
 # DOMAIN-KEYWORD: 20
-# DOMAIN-SUFFIX: 848
+# DOMAIN-SUFFIX: 850
 # IP-CIDR: 89
 # IP-CIDR6: 4
-# TOTAL: 985
+# TOTAL: 987
 payload:
   - DOMAIN,addons.mozilla.org
   - DOMAIN,amp-api.podcasts.apple.com
@@ -11992,6 +11992,7 @@ payload:
   - DOMAIN-SUFFIX,whoer.net
   - DOMAIN-SUFFIX,wikibooks.org
   - DOMAIN-SUFFIX,wikidata.org
+  - DOMAIN-SUFFIX,wikifunctions.org
   - DOMAIN-SUFFIX,wikileaks-forum.com
   - DOMAIN-SUFFIX,wikileaks.info
   - DOMAIN-SUFFIX,wikileaks.org
@@ -12003,6 +12004,7 @@ payload:
   - DOMAIN-SUFFIX,wikipedia.org
   - DOMAIN-SUFFIX,wikiquote.org
   - DOMAIN-SUFFIX,wikisource.org
+  - DOMAIN-SUFFIX,wikispecies.org
   - DOMAIN-SUFFIX,wikiversity.org
   - DOMAIN-SUFFIX,wikivoyage.org
   - DOMAIN-SUFFIX,wikiwand.com
