@@ -1916,14 +1916,14 @@ payload:
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-10-14 06:11:06
+# UPDATED: 2026-10-18 03:59:10
 # DOMAIN: 127
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 34901
+# DOMAIN-SUFFIX: 34907
 # IP-CIDR: 115
 # IP-CIDR6: 4
 # PROCESS-NAME: 1
-# TOTAL: 35184
+# TOTAL: 35190
 payload:
   - DOMAIN-KEYWORD,amazon
   - DOMAIN-KEYWORD,avoddashs
@@ -2086,13 +2086,13 @@ payload:
 # NAME: Proxy
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2026-10-08 06:31:59
+# UPDATED: 2026-10-18 03:59:31
 # DOMAIN: 9
 # DOMAIN-KEYWORD: 26
-# DOMAIN-SUFFIX: 6827
+# DOMAIN-SUFFIX: 6830
 # IP-CIDR: 96
 # IP-CIDR6: 4
-# TOTAL: 6962
+# TOTAL: 6965
 payload:
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
